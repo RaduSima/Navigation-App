@@ -1,0 +1,26 @@
+Sima Radu
+321 CB
+
+-README-
+- Navigation App -
+
+	Clasa principala a programului este clasa "Application", in care se
+afla toate celelalte obiecte necesare si care, practic, inlocuieste main-ul
+(in main doar se creeaza o instanta a clasei Application si se executa metoda
+run). Aceasta contine modalitatile de citire si scriere in fisiere (un scanner
+si un output writer), graful de strazi si cele 4 tipuri de vehicule, stocate
+intr-un "map".
+
+	Vehiculele sunt reprezentate prin intermediul clasei abstracte
+"Vehicle", pe care cele 4 clase care reprezinta cele 4 tipuri de vehicule o
+mostenesc, rescriind metoda care calculeaza costul deplasarii unui vehicul pe o
+anumita strada.
+
+	Strazile sunt modelate prin intermediul clasei "Street" si al clasei
+"Restriction".
+
+	Clasa care contine metoda principal functionala a temei, metoda
+"drive", este clasa "Graph", care modeleaza un graf de strazi, prin intermediul
+unui "map" de "maps" de strazi. Functia drive foloseste o coada de prioritati
+implementata prin intermediul unui vector de "Pair" (o clasa ajutatoare pentru
+algoritmul Djykstra), care simuleaza un heap.
